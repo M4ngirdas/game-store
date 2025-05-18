@@ -1,3 +1,4 @@
 # shows that this project is html instead of css
 *.html linguist-detectable=true
 *.css linguist-detectable=false
+*.js linguist-detectable=true
