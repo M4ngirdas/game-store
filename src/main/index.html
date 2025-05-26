@@ -16,7 +16,7 @@
             <div class="header-search">
                 <h1>PlayVia</h1>
                 <input type="text" placeholder="What are you looking for?">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <abbr title="Search"><button><i class="fa-solid fa-magnifying-glass"></i></button></abbr>
             </div>
             <nav>
                 <a href="#home">Home</a>
@@ -43,19 +43,35 @@
                     </div>
                 </div>
             </nav>
-            <abbr title="Log in | Register"><button class="get-started-btn"><i class="fa-solid fa-user-plus"></i>Get
-                    started</button></abbr>
+            <div class="cart-container">
+                <div class="cart-btn-content">
+                    <button class="main-btn cart-btn"><i class="fa-solid fa-cart-shopping"></i><i class="fa-solid fa-exclamation cart-notif"></i></button>
+                </div>
+                <div class="cart-overlay">
+                    <div class="cart-popup">
+                        <div class="cart-popup-inner">
+                            <h2>My Cart</h2>
+                            <button class="cart-close"><i class="fa-solid fa-circle-xmark"></i></button>
+                        </div>
+                        <h3 class="cart-popup-content"></h3>
+                    </div>
+                </div>
+            </div>
+            <abbr title="Log in | Register"><button class="main-btn get-started-btn"><i
+                        class="fa-solid fa-user-plus"></i>Get started</button></abbr>
         </div>
     </header>
     <main>
         <section class="home">
+
             <div class="home-content">
+
                 <div class="home-main">
                     <h1>Got games to sell?</h1>
-                    <h2>Easily sell games, consoles, and gaming accessories</h2>
+                    <h2 class="typewriter-effect"></h2>
                     <div class="home-main-btns">
-                        <button>Start selling</button>
-                        <button id="home-main-btn2">Learn more</button>
+                        <button class="accent-btn">Start selling</button>
+                        <button class="main-btn">Learn more</button>
                     </div>
                     <div class="how-it-works-container">
                         <h3 id="how-it-works-title">How does it work?</h3>
@@ -78,9 +94,30 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="home-side">
+                    <h1>Featured Games</h1>
+                    <div class="home-side-game-card">
+                        <div class="home-side-game-img"></div>
+                        <div class="home-side-game-content">
+                            <h3 class="game-name">Minecraft</h3>
+                            <p>a blocky sandbox of survival and exploration.</p>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="home-side-game-card">
+                        <div class="home-side-game-img"></div>
+                        <div class="home-side-game-content">
+                            <h3 class="game-name">GTA V</h3>
+                            <p>heists, crime, and survival in an open-world city.</p>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                    <button class="accent-btn">See All</button>
                 </div>
+
             </div>
+
         </section>
     </main>
 </body>
