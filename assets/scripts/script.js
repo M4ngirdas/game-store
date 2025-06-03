@@ -1,13 +1,12 @@
 // typewriter effect
 const text = "Easily sell games, consoles and gaming accessories.";
 let index = 0;
-let speed = 100;
 
 const typeWriter = () => {
     if (index < text.length) {
         document.querySelector(".typewriter-effect").innerHTML += text.charAt(index);
-        index += 1;
-        setTimeout(typeWriter, speed);
+        index++;
+        setTimeout(typeWriter, 100);
     }
 }
 
@@ -31,18 +30,15 @@ cartClose.addEventListener("click", () => {
 const gameNames = document.querySelectorAll(".game-name");
 const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
 const cartContent = document.querySelector(".cart-popup-content");
-const cartNotification = document.querySelector(".cart-notif");
+const cartNotif = document.querySelector(".cart-notif");
 
-function addToCart() {
-addToCartBtns.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        const name = gameNames[index].textContent;
-        const cartItem = document.createElement("h3");
-        cartItem.textContent = name;
-        cartContent.appendChild(cartItem);
-        cartNotification.style.display = "flex";
-    });
+// sidebar functionality
+const sidebar = document.querySelector(".nav-sidebar");
+
+document.querySelector(".nav-open-sidebar").addEventListener("click", () => {
+    sidebar.style.display = "flex";
 });
-}
 
-addToCart();
+document.querySelector(".nav-hide-sidebar").addEventListener("click", () => {
+    sidebar.style.display = "none";
+});

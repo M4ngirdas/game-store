@@ -68,6 +68,22 @@ button:hover {
     color: var(--text-color);
 }
 
+nav {
+    display: flex;
+}
+
+nav a {
+    font-size: 20px;
+    font-family: 'Inter M', 'Inter', Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+}
+
 section {
     margin-top: 125px;
     padding: 0 7rem;
@@ -76,6 +92,7 @@ section {
 body {
     background-color: var(--primary);
     color: var(--text-color);
+    min-height: 100vh;
 }
 
 /* Header style */
@@ -121,7 +138,7 @@ header {
 }
 
 .header-search input {
-    font-family: 'Inter B', 'Inter', Arial, Helvetica, sans-serif;
+    font-family: 'Inter M', 'Inter', Arial, Helvetica, sans-serif;
     border-radius: 30px;
     padding: 0 8px;
     width: 250px;
@@ -151,11 +168,6 @@ header {
     opacity: 30%;
 }
 
-.header-section nav {
-    display: flex;
-    gap: 1rem;
-}
-
 .nav-expand {
     display: flex;
     justify-content: flex-start;
@@ -165,7 +177,6 @@ header {
 .nav-inner-expand {
     display: none;
     min-width: 170px;
-    flex-direction: column;
     position: absolute;
     top: 25px;
     gap: 5px;
@@ -176,9 +187,9 @@ header {
     transition: opacity 0.4s ease, max-height 0.4s ease;
 }
 
-.nav-inner-expand a {
-    padding: 4px;
-    border-radius: 5px;
+.nav-inner-expand ul {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-inner-expand a:hover {
@@ -189,11 +200,40 @@ header {
     display: flex;
 }
 
-.header-section a,
-.header-section p {
-    color: var(--text-color);
-    font-family: 'Inter M', 'Inter', Arial, Helvetica, sans-serif;
-    font-size: 20px;
+.nav-sidebar {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #202020d7;
+    backdrop-filter: blur(10px);
+}
+
+.nav-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+
+.nav-sidebar li {
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.nav-sidebar li:hover {
+    background-color: #2e2e2e;
+}
+
+.nav-open-sidebar {
+    display: none;
 }
 
 .cart-btn {
@@ -203,7 +243,7 @@ header {
     padding: 0;
 }
 
-.fa-solid.fa-exclamation{
+.fa-solid.fa-exclamation {
     display: none;
     justify-content: center;
     align-items: center;
@@ -290,6 +330,23 @@ header {
     font-size: 1.3rem;
 }
 
+/* Header responsivness */
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .nav-open-sidebar {
+        display: block;
+    }
+}
+
+@media(max-width: 600px) {
+    .nav-sidebar {
+        width: 100%;
+    }
+}
+
 /* Home style */
 .home-section {
     display: flex;
@@ -314,7 +371,7 @@ header {
 
 .home-main h1 {
     font-family: 'Inter B', 'Inter', Arial, Helvetica, sans-serif;
-    font-size: 5rem;
+    font-size: clamp(3rem, 6vw, 5rem);
 }
 
 .home-main h2 {
@@ -417,7 +474,7 @@ header {
     padding: 0 8px;
 }
 
-.home-side-game-card button i{
+.home-side-game-card button i {
     margin: 0 8px;
 }
 

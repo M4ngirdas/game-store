@@ -18,29 +18,78 @@
             <button title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Support</a>
-            <p>|</p>
-            <div class="nav-expand">
-                <a href="#">Store</a>
-                <div class="nav-inner-expand">
-                    <a href="#">All Offers</a>
-                    <a href="#">New Releases</a>
-                    <a href="#">Top Sellers</a>
-                    <a href="#">Free to Play</a>
-                    <a href="#">Gift Cards</a>
-                </div>
+            <!-- Main -->
+            <ul>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="#">Support</a></li>
+                <p class="hideOnMobile">|</p>
+                <li class="hideOnMobile">
+                    <div class="nav-expand">
+                        <a href="/src/extra/store.html">Store</a>
+                        <div class="nav-inner-expand">
+                            <ul>
+                                <li><a href="#">All Offers</a></li>
+                                <li><a href="#">New Releases</a></li>
+                                <li><a href="#">Top Sellers</a></li>
+                                <li><a href="#">Free to Play</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="hideOnMobile">
+                    <div class="nav-expand">
+                        <a href="#">Sales</a>
+                        <div class="nav-inner-expand">
+                            <ul>
+                                <li><a href="#">Under €10</a></li>
+                                <li><a href="#">Top Discounts</a></li>
+                                <li><a href="#">Daily Deals</a></li>
+                                <li><a href="#">Bundles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Sidebar (for smaller screens) -->
+            <div class="nav-sidebar">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-circle-xmark nav-hide-sidebar"></i></a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li>
+                        <div class="nav-expand">
+                            <a href="/src/extra/store.html">Store</a>
+                            <div class="nav-inner-expand">
+                                <ul>
+                                    <li><a href="#">All Offers</a></li>
+                                    <li><a href="#">New Releases</a></li>
+                                    <li><a href="#">Top Sellers</a></li>
+                                    <li><a href="#">Free to Play</a></li>
+                                    <li><a href="#">Gift Cards</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-expand">
+                            <a href="#">Sales</a>
+                            <div class="nav-inner-expand">
+                                <ul>
+                                    <li><a href="#">Under €10</a></li>
+                                    <li><a href="#">Top Discounts</a></li>
+                                    <li><a href="#">Daily Deals</a></li>
+                                    <li><a href="#">Bundles</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="nav-expand">
-                <a href="#">Sales</a>
-                <div class="nav-inner-expand">
-                    <a href="#">Under €10</a>
-                    <a href="#">Top Discounts</a>
-                    <a href="#">Daily Deals</a>
-                    <a href="#">Bundles</a>
-                </div>
-            </div>
+
         </nav>
         <div class="cart-container">
             <div class="cart-btn-content">
@@ -59,6 +108,7 @@
         </div>
         <button title="Log in | Register" class="main-btn get-started-btn"><i class="fa-solid fa-user-plus"></i>Get
             started</button>
+        <i class="fa-solid fa-bars nav-open-sidebar"></i>
     </header>
     <main>
         <section class="home-section">
@@ -110,7 +160,7 @@
                         <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i>Add to Cart</button>
                     </div>
                 </div>
-                <button class="accent-btn">See All</button>
+                <a href="/src/extra/store.html"><button class="accent-btn">See All</button></a>
             </aside>
 
         </section>

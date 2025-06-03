@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/main/style.css">
+    <script src="https://kit.fontawesome.com/02441b9cc1.js" crossorigin="anonymous"></script>
+    <script src="/src/main/script.js" defer></script>
+    <title>Game store - PlayVia</title>
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="header-search">
+            <h1>PlayVia</h1>
+            <input type="text" placeholder="What are you looking for?">
+            <button title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <nav>
+            <a href="/src/main/index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Support</a>
+            <p>|</p>
+            <div class="nav-expand">
+                <a href="#">Store</a>
+                <div class="nav-inner-expand">
+                    <a href="#">All Offers</a>
+                    <a href="#">New Releases</a>
+                    <a href="#">Top Sellers</a>
+                    <a href="#">Free to Play</a>
+                    <a href="#">Gift Cards</a>
+                </div>
+            </div>
+            <div class="nav-expand">
+                <a href="#">Sales</a>
+                <div class="nav-inner-expand">
+                    <a href="#">Under €10</a>
+                    <a href="#">Top Discounts</a>
+                    <a href="#">Daily Deals</a>
+                    <a href="#">Bundles</a>
+                </div>
+            </div>
+        </nav>
+        <div class="cart-container">
+            <div class="cart-btn-content">
+                <button title="My cart" class="main-btn cart-btn"><i class="fa-solid fa-cart-shopping"></i><i
+                        class="fa-solid fa-exclamation cart-notif"></i></button>
+            </div>
+            <div class="cart-overlay">
+                <div class="cart-popup">
+                    <div class="cart-popup-inner">
+                        <h2>My Cart</h2>
+                        <button class="cart-close"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </div>
+                    <h3 class="cart-popup-content"></h3>
+                </div>
+            </div>
+        </div>
+        <button title="Log in | Register" class="main-btn get-started-btn"><i class="fa-solid fa-user-plus"></i>Get
+            started</button>
+    </header>
+</body>
+
+</html>
